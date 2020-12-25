@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://use.fontawesome.com/70db5d860b.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Datafile</title>
+    
+  </head>
+  <body>
+    <header class="text-gray-700 body-font">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        
+        <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+          <a href="index.html" class="mr-5 hover:text-gray-900"><b ><i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Home</b></a>
+          
+        </nav>
+       
+      </div>
+    </header>
+
+    <div class="container" style="display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;">   
+    
+
+    <h5 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4"  style="color: rgb(60, 199, 199);"> <span class="inline-block py-1 px-3 rounded bg-indigo-100 text-indigo-500 text-sm font-medium tracking-widest">The best path(s) are</span></h5>
+    
+
+    <h3 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4"
+    ><span class="inline-block py-1 px-3 rounded bg-indigo-100 text-indigo-500 text-sm font-medium tracking-widest"  style="font-size: 50px;color: teal;
+    font-weight: bold;">{{data_res}}</span></h3>
+
+    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="show_section()">Show statistics</button>
+    <form class="" action="data" method="POST" style="margin-top: 8px;">
+      <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"><input type="file" id="myfile" name="the_coordinate_file"></button>
+      <input class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" type="submit" id="submitfile" value="Show scatterplot" style="background-color:crimson;">
+</form>
+
+    <script>
+        function show_section()
+        {
+            var element = document.getElementById("mydiv");
+            if(element.style.display==="none")
+            {
+                element.style.display="block";
+            }
+            else
+            {
+                element.style.display="none";
+            }
+        }
+    </script>
+</div>
+
+ <div id="mydiv" style="display:none">
+    <section class="text-gray-700 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap -m-12">
+            <div class="p-12 md:w-1/2 flex flex-col items-start">
+              <span class="inline-block py-1 px-3 rounded bg-indigo-100 text-indigo-500 text-sm font-medium tracking-widest">INITIAL Q-TABLE</span>
+              <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">Each Q value initially 100</h2>
+              <p class="leading-relaxed mb-8">{{data_Q}}</p>
+            
+            </div>
+            <div class="p-12 md:w-1/2 flex flex-col items-start">
+              <span class="inline-block py-1 px-3 rounded bg-indigo-100 text-indigo-500 text-sm font-medium tracking-widest">FINAL Q-TABLE</span>
+              <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">After 900 iterations</h2>
+              <p class="leading-relaxed mb-8">{{data_final_Q}}</p>
+          
+             
+            </div>
+          </div>
+          <div class="flex flex-wrap -m-12">
+            <div class="p-12 md:w-1/2 flex flex-col items-start">
+              <span class="inline-block py-1 px-3 rounded bg-indigo-100 text-indigo-500 text-sm font-medium tracking-widest">WEIGHT TABLE</span>
+              <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">Path weights between each node</h2>
+              <p class="leading-relaxed mb-8">{{data_R}}</p>
+            
+            </div>
+        </div>
+      </section>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
