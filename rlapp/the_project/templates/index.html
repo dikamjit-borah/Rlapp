@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Home</title>
+  </head>
+  <body style="background: linear-gradient(to right , #7F7FD5 ,#91EAE4 );>
+    <header class="text-gray-700 body-font">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        
+        <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+          <a class="mr-5 hover:text-gray-900"><b>Home</b></a>
+          <a class="mr-5 hover:text-gray-900" href="team.html">The team</a>
+          <a class="mr-5 hover:text-gray-900" href="tech.html">Tech stack</a>
+          
+        </nav>
+       
+      </div>
+    </header>
+
+    <section class="text-gray-700 body-font">
+      <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <div class="text-center lg:w-2/3 w-full">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Optimal Node Finder</h1>
+          <p class="mb-8 leading-relaxed">Select a csv file containing connections between the nodes</p>
+          <div class="flex justify-center">
+            <form class="" action="data" method="POST">
+                          <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"><input type="file" id="myfile" name="the_csv_file"></button>
+                          <input class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" type="submit" id="submitfile" value="Find optimal nodes" style="background-color:crimson;">
+
+                          <div class="form-group" style="margin-top: 8px;" align=center>
+                          
+                            <div class="col-sm-10">          
+                              <input type="number" class="form-control" id="pwd" placeholder="Enter START node" name="START" id="start_node">
+                            </div>
+                            
+                           
+                            <div class="col-sm-10"style="margin-top: 8px;" >          
+                              <input type="number" class="form-control" id="pwd" placeholder="Enter END node " name="END" id="end_node">
+                            </div>
+                          </div>   
+          </form>
+
+            
+          </div>
+        
+        </div>
+      </div>
+    </section>
+    <footer class="page-footer font-small blue">
+
+      <!-- Copyright -->
+      <!-- <div class="footer-copyright text-center py-3 title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900" style="font-size: small;" >Developed with ❤️ by <a href="https://hunkyxstudman.github.io/" style="color: rgb(93, 93, 241);">Dikamjit Borah</a> © <span style="font-family: Timeline; font-size: smaller;">HOBARB</span></div>
+      Copyright -->
+    
+    </footer>
+    <!-- Footer -->
+
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
